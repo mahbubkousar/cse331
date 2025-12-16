@@ -179,11 +179,17 @@ body {
 .header {
     background: var(--gradient-primary);
     color: white;
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-sm) 0;
     position: sticky;
     top: 0;
     z-index: var(--z-header);
     box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: var(--spacing-md) 0;
+    }
 }
 
 .header-content {
@@ -193,23 +199,34 @@ body {
 }
 
 .logo {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
 }
 
 .logo-icon {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        font-size: 1.25rem;
+        gap: var(--spacing-sm);
+    }
+
+    .logo-icon {
+        font-size: 1.5rem;
+    }
 }
 
 .controls-toggle {
     background: rgba(255, 255, 255, 0.2);
     border: none;
     color: white;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: var(--radius-md);
     cursor: pointer;
     display: flex;
@@ -217,6 +234,23 @@ body {
     justify-content: center;
     transition: background-color var(--transition-fast);
     backdrop-filter: blur(10px);
+}
+
+.controls-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (min-width: 768px) {
+    .controls-toggle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .controls-toggle svg {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .controls-toggle:hover {
@@ -369,7 +403,7 @@ body {
 @media (min-width: 768px) {
     .nav-bar {
         position: sticky;
-        top: 76px;
+        top: 58px;
     }
 }
 
